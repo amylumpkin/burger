@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 
 const exphbs = require("express-handlebars");
 
-app.engine("hbs", exphbs({ defaultLayout: "main", extname: "hbs" }));
-app.set("view engine", "hbs");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 const burgerRoutes = require("./controllers/burgersController");
 app.use("/burgers", burgerRoutes); //requests have to come from my website/burgers...this is the home page

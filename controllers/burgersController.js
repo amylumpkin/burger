@@ -15,11 +15,12 @@ router.get("/", function(req, res) {
     burger.all(function(err, data) {
         if(err) res.status(500).send(err);
         else {
-            const hbsObject = { burgers: data };
+            const hbsObject = { burger: data };
             console.log(hbsObject);
-            res.render("index", hbsObject); //render index hb file
+            res.render("index", hbsObject); //render index hb file     ********   HELP!!!  
         }
     });
+});
 
 router.post("/api", function(req, res){
     burger.create(["name", "devoured"], [req.body.name, req.body.devoured], function(err,result){
@@ -53,5 +54,5 @@ router.delete("/api/:id", function(req, res) {
 
 
 //res.send("You're on the home page");// change this to res render index
-});
+
 module.exports = router;

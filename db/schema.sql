@@ -1,7 +1,8 @@
-create database eatburgers;
-use eatburgers;
+drop database if exists burgers_db;
+create database burgers_db;
+use burgers_db;
 
-create table eatburgers
+create table burgers
 (
     id int not null auto_increment,
     name varchar (100) not null,
@@ -11,6 +12,6 @@ create table eatburgers
 
 
 
-insert into eatburgers (name) values ('Bacon Cheeseburger');
-insert into eatburgers (name) values ('Mushroom and Swiss');
-insert into eatburgers (name) values ('Chili Burger');
+insert into burgers (name) values ('Bacon Cheeseburger');
+insert into burgers (name) values ('Mushroom and Swiss');
+insert into burgers (name) values ('Chili Burger');
