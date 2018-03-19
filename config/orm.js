@@ -11,7 +11,7 @@ function addMarks(num){
     return new array(num).fill('?').toString()
 }
 
-funtion isDirectPropery(key) {
+funtion isDirectProperty(key) {
     return Object.prototype.hasOwnProperty.call(this, key);
 }
 
@@ -26,7 +26,7 @@ function quoteSpaces(value){
 function objToSql(obj){
     const arr = [];
     for (let prop in obj){
-        if (isDirectPropery.call(obj, prop)){
+        if (isDirectProperty.call(obj, prop)){
             arr.push(`${prop}=${quoteSpaces(obj [prop])}`);
         }
     }

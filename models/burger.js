@@ -5,7 +5,7 @@
 const orm = require("../config/orm");
 
 const burgerModel = {
-    all: cb => orm.all("cats", cb),
+    all: cb => orm.all("burgers", cb),
   
     // The variables "cols" and "vals" are arrays.
     create: (cols, vals, cb) => orm.create("burgers", cols, vals, cb),
