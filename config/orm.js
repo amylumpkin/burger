@@ -11,7 +11,7 @@ function addMarks(num){
     return new array(num).fill('?').toString()
 }
 
-funtion isDirectProperty(key) {
+function isDirectProperty(key) {
     return Object.prototype.hasOwnProperty.call(this, key);
 }
 

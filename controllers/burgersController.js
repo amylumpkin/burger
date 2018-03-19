@@ -9,10 +9,10 @@ const router = express.Router();
 const burger = require("../models/burger");
 
 //import model burger.js to use its database functions
-//const burger = require("../models/burger");
+
 
 router.get("/", function(req, res) {
-    burgers.all(function(err, data) {
+    burger.all(function(err, data) {
         if(err) res.status(500).send(err);
         else {
             const hbsObject = { burgers: data };
@@ -22,7 +22,7 @@ router.get("/", function(req, res) {
     });
 
 router.post("/api", function(req, res){
-    burger.create(["name", "devoured"], [req.body.name, req.body.sleepy], function(err,result){
+    burger.create(["name", "devoured"], [req.body.name, req.body.devoured], function(err,result){
         if(err) res.status(500).send(err);
         else res.json({ id: result.insertId });
     });
