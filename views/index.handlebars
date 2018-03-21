@@ -1,38 +1,37 @@
-<!-- need the template that handlebars can render into
-    - create a button that will submit user input into database -->
-    <h1>Burgers Are Good</h1>
-    <h2>Eat the Burgers!</h2>
+<h1>Burgers!</h1>
 
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{>burgers/burgers-block devoured=true}}
-        {{/unless}}
-        {{/each}}
-    </ul>
-
-    <h2>Burgers To Eat!</h2>
+<h2>Burgers that have been devoured!</h2>
 
 <ul>
-  {{#each burgers}}
+  {{#each burger}}
+    {{#unless sleepy}}
+      {{> burger/burger-block sleep=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that still need to be eaten!</h2>
+
+<ul>
+  {{#each burger}}
     {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
+      {{> burger/burger-block sleep=false}}
     {{/if}}
   {{/each}}
 </ul>
 
-<h2>Add Your Favorite Burger</h2>
+<h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="burg" name="name">
+    <input type="text" id="ca" name="name">
   </div>
 
   <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
+    <label for="sleepy">Devoured?</label><br>
     <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Uneaten
+    <input type="radio" name="devoured" value="0"> Awake
   </div>
 
   <button type="submit">Add Burger</button>

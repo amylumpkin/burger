@@ -1,5 +1,4 @@
-// connect node to mysql
-// export the connection
+// Set up MySQL connection.
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
@@ -7,7 +6,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "amy",
   password: "Password",
-  database: "burgers_db"
+  database: "new_burger_db"
 });
 
 // Make connection.

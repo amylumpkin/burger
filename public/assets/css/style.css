@@ -1,0 +1,33 @@
+h1 {
+  color: #f08700;
+}
+h2 {
+  color: #f08700;
+}
+
+body {
+  background: #bbd;
+  
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #00a6a6;
+  color: whitesmoke
+  
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}

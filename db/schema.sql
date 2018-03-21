@@ -1,17 +1,18 @@
-drop database if exists burgers_db;
-create database burgers_db;
-use burgers_db;
 
-create table burgers
+
+CREATE DATABASE new_burger_db;
+USE new_burger_db;
+
+CREATE TABLE burger
 (
-    id int not null auto_increment,
-    name varchar (100) not null,
-    devoured boolean default false,
-    primary key (id)
+	id int NOT NULL AUTO_INCREMENT,
+	name varchar(255) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
 );
-
-
-
-insert into burgers (name) values ('Bacon Cheeseburger');
-insert into burgers (name) values ('Mushroom and Swiss');
-insert into burgers (name) values ('Chili Burger');
+INSERT INTO burger (name) VALUES ('Chili', true);
+INSERT INTO burger (name) VALUES ('Jalapeno', true);
+INSERT INTO burger (name, devoured) VALUES ('Cheesy');
+INSERT INTO burger (name, devoured) VALUES ('Veggie');
+INSERT INTO burger (name, devoured) VALUES ('Bacon');
+INSERT INTO burger (name) VALUES ('The Works', true);
